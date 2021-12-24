@@ -7,7 +7,7 @@ namespace SelSCCore
 {
     public class Tests: DriverHelper
     {
-
+        
 
         [SetUp]
         public void Setup()
@@ -16,7 +16,6 @@ namespace SelSCCore
 
             ChromeOptions options = new ChromeOptions();
             options.AddArguments("--headless");
-            options.AddArguments("window-size=1800x900");
 
             Console.WriteLine("Setup");
         }
@@ -24,7 +23,6 @@ namespace SelSCCore
         [Test]
         public void Test1()
         {
-            String ComboControlName = "ContentPlaceHolder1_AllMealsCombo";
 
             Driver.Navigate().GoToUrl("https://demowf.aspnetawesome.com");
 
