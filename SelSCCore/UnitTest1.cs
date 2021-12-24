@@ -14,6 +14,10 @@ namespace SelSCCore
         {
             Driver = new ChromeDriver();
 
+            ChromeOptions options = new ChromeOptions();
+            options.AddArguments("--headless");
+            options.AddArguments("window-size=1800x900");
+
             Console.WriteLine("Setup");
         }
 
