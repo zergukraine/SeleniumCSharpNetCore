@@ -12,12 +12,11 @@ namespace SelSCCore
         [SetUp]
         public void Setup()
         {
-            Driver = new ChromeDriver();
-
             ChromeOptions options = new ChromeOptions();
             options.AddArguments("--headless");
 
             Console.WriteLine("Setup");
+            Driver = new ChromeDriver();
         }
 
         [Test]
