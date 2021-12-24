@@ -9,14 +9,16 @@ namespace SelSCCore
     {
         
 
-        [SetUp]
+        [OneTimeSetUp]
         public void Setup()
         {
             ChromeOptions options = new ChromeOptions();
             options.AddArguments("--headless");
+            options.AddArguments("window-size=1800x900");
+            options.AddUserProfilePreference("download.default_directory", @"C:\Users\HP\Downloads");
+            options.PageLoadStrategy = PageLoadStrategy.Normal;
+            Driver = new ChromeDriver(options);
 
-            Console.WriteLine("Setup");
-            Driver = new ChromeDriver();
         }
 
         [Test]
