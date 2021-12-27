@@ -20,7 +20,7 @@ namespace SelSCCore.Steps
         [Given(@"I navigate to the app")]
         public void GivenINavigateToTheApp()
         {
-            Driver.Navigate().GoToUrl("https://demowf.aspnetawesome.com");
+            Driver.Navigate().GoToUrl("http://eaapp.somee.com");
         }
 
         [Given(@"I click a login link")]
@@ -36,7 +36,7 @@ namespace SelSCCore.Steps
             dynamic data = table.CreateDynamicInstance();
             //data.Username = "admin";
             //data.Password = "password";
-            loginPage.EnterUserNameAndPassword(data.Username, data.Password);
+            loginPage.EnterUserNameAndPassword(data.UserName, data.Password);
 
         }
 
